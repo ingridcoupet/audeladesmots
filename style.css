@@ -6,13 +6,15 @@
 }
 
 .navbar{
-    position: absolute;
+    position: fixed;
     padding: 50px;
     display: flex;
     justify-content: space-between;
     width: 100%;
     box-sizing: border-box;
     align-items: center;
+    background-color: #d7d7d74d;
+    height: 200px;
 }
 
 .navbar img.logo{
@@ -41,7 +43,7 @@
 .navbar .menu-hamburger{
     display: none;
     position: absolute;
-    top: 85px;
+    top: 60px;
     right: 50px;
     width: 35px;
 }
@@ -50,10 +52,15 @@
     overflow-y: hidden;
 }
 
+header{
+    padding-top: 200px;
+}
+
 @media screen and (max-width: 900px){
 
     .navbar{
         padding: 0;
+        background-color: #ffffff00;
     }
     
     .navbar .menu-hamburger{
@@ -86,13 +93,15 @@
     }
 
     .navbar img.logo{
-        position: absolute;
-        top: 50px;
-        left: 50px;
+        display: none;
     }
 
     .navbar .nav-links ul li{
         margin: 20% 0;
         font-size: 1.2em;
+    }
+
+    header{
+        padding-top: 0px;
     }
 }
