@@ -53,6 +53,7 @@ header{
 .navbar .menu-hamburger{
     display: none;
     position: absolute;
+    top: 70px;
     right: 50px;
     width: 35px;
 }
@@ -68,6 +69,7 @@ header{
     }
 
     .nav-links{
+        backdrop-filter: blur(7px);
         top: 0;
         left: 0;
         position: absolute;
@@ -77,6 +79,12 @@ header{
         display: flex;
         justify-content: center;
         align-items: center;
+        margin-left: -100%;
+        transition: all 0.5s ease;
+    }
+
+    .nav-links.mobile-menu{
+        margin-left: 0;
     }
 
     .nav-links ul{
@@ -86,6 +94,13 @@ header{
     }
 
     .navbar img.logo{
-        margin: 50px;
+        position: absolute;
+        top: 50px;
+        left: 50px;
+    }
+
+    .navbar .nav-links ul li{
+        margin: 20% 0;
+        font-size: 1.2em;
     }
 }
