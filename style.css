@@ -5,11 +5,6 @@
     list-style: none;
 }
 
-header{
-    height: 100vh;
-    width: 100vw;
-}
-
 .navbar{
     position: absolute;
     padding: 50px;
@@ -46,9 +41,13 @@ header{
 .navbar .menu-hamburger{
     display: none;
     position: absolute;
-    top: 80px;
+    top: 85px;
     right: 50px;
     width: 35px;
+}
+
+.scroll-block{
+    overflow-y: hidden;
 }
 
 @media screen and (max-width: 900px){
