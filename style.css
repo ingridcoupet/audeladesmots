@@ -1,8 +1,14 @@
+@import url(https://fonts.googleapis.com/css?family=Dancing+Script);
+
 *{
     margin: 0;
     padding: 0;
     text-decoration: none;
     list-style: none;
+}
+
+html {
+	scroll-behavior: smooth;
 }
 
 :target::before {
@@ -43,7 +49,7 @@
     margin: 0 30px;
 }
 
-.navbar .nav-links ul li.active a{
+.navbar .nav-links ul li a.active{
     font-weight: 600;
 }
 
@@ -61,7 +67,7 @@
 
 header{
     padding: 250px 200px;
-    background: url("img/accueil-descktop.png");
+    background: url("img/accueil.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: top;
@@ -95,14 +101,29 @@ header div.title .head-title{
     color: white;
 }
 
+header .text{
+    margin-top: 70px;
+    font-family: Dancing Script;
+    color: white;
+    font-size: 35px;
+}
+
 @media screen and (max-width: 1325px){
 
     header div.title .head-name{
-        background-color: #00000053;
+        color: black;
+    }
+
+    header div.title .head-name::after{
+        color: black;
     }
     
     header div.title .head-title{
-        background-color: #00000053;
+        color: black;
+    }
+
+    header .text{
+        color: black;
     }
 
 }
@@ -164,11 +185,12 @@ header div.title .head-title{
     header{
         padding: 100px 50px;
         height: 150px;
+        background-size: auto;
     }
     
     header div.title .head-name{
-        font-size: 20px;
-        background-color: #00000053;
+        font-size: 25px;
+        font-weight: 650;
     }
     
     header div.title .head-name::after{
@@ -180,12 +202,18 @@ header div.title .head-title{
         margin-top: 30px;
         font-size: 35px;
         font-weight: 600;
-        background-color: #00000075;
+    }
+
+    header .text{
+        margin-top: 40px;
     }
 }
 
 @media screen and (max-width: 400px){
 
+    header div.title .head-name{
+        font-weight: 400;
+    }
     
     header div.title .head-name::after{
         margin-left: 20px;
