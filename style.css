@@ -1,9 +1,10 @@
-@import url(https://fonts.googleapis.com/css?family=Dancing+Script);
+/* Option, Parametres et Reset */
 
 :root{
     --light-green: #c3ffeb;
-    --light-pink: #ffc3eb;
+    --light-pink: #fdd8f1;
     --black: #270c25;
+    --white: #fcf5f5;
 }
 
 *{
@@ -24,6 +25,14 @@ html {
     margin-top: -250px;
 }
 
+/* Body */
+
+body{
+    background-color: var(--white);
+}
+
+/* Navbar */
+
 .navbar{
     position: fixed;
     padding: 50px;
@@ -32,7 +41,7 @@ html {
     width: 100%;
     box-sizing: border-box;
     align-items: center;
-    background-color: #ffc2d3;
+    background-color: var(--light-pink);
     height: 200px;
     backdrop-filter: blur(2px);
     z-index: 100;
@@ -72,14 +81,23 @@ html {
     overflow-y: hidden;
 }
 
+/* Header */
+
 header{
-    padding-top: 270px;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 200px;
     padding-left: 10%;
     background-color: var(--light-green);
     height: 400px;
+    color: var(--black);
 }
 
-header img.logo{
+header div.left{
+    padding-top: 70px;
+}
+
+header div.left img.logo{
     border-radius: 100%;
     width: 100px;
     height: 100px;
@@ -88,40 +106,53 @@ header img.logo{
     display: none;
 }
 
-header div.title{
+header div.left div.title{
     height: fit-content;
     width: fit-content;
-    color: var(--black);
 }
 
-header div.title .head-name{
+header div.left div.title .head-name{
     font-size: 30px;
     font-weight: 500;
     width: fit-content;
 }
 
-header div.title .head-name::after{
+header div.left div.title .head-name::after{
     font-size: 20px;
     font-weight: 500;
     margin-left: 50px;
     content: "EI";
 }
 
-header div.title .head-title{
+header div.left div.title .head-title{
     margin-top: 50px;
     font-size: 45px;
     font-weight: 700;
 }
 
-header .text{
+header div.left .text{
     margin-top: 70px;
-    font-family: Dancing Script;
     font-size: 35px;
 }
 
+header div.right{
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding-right: 20%;
+}
+
+header div.right .text{
+    font-size: 50px;
+}
+
+/* Sections */
+
+/* 1 : Diapo */
+
 section.diapo{
     overflow: hidden;
-    height: 500px;
+    height: 300px;
 }
 
 section.diapo div.elements{
@@ -131,12 +162,13 @@ section.diapo div.elements{
 section.diapo div.elements div.element{
     flex: 1 0 100%;
     position: relative;
-    height: 500px;
+    height: 300px;
     width: max-content;
 }
 
 section.diapo div.elements div#slide01{
     background-image: url("img/slide01.png");
+    background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -155,20 +187,24 @@ section.diapo div.elements div#slide03{
     background-size: cover;
 }
 
+/* 2 : Histoire */
+
+/* Media Query */
+
 @media screen and (max-width: 450px){
-    header div.title .head-name{
+    header div.left div.title .head-name{
         font-size: 20px;
     }
     
-    header div.title .head-name::after{
+    header div.left div.title .head-name::after{
         font-size: 10px;
     }
     
-    header div.title .head-title{
+    header div.left div.title .head-title{
         font-size: 35px;
     }
 
-    header .text{
+    header div.left .text{
         font-size: 25px;
     }
 }
@@ -227,11 +263,35 @@ section.diapo div.elements div#slide03{
     }
 
     header{
+        display: block;
+        height: 500px;
         padding-top: 170px;
     }
 
-    header img.logo{
+    header div.left{
+        padding-top: 0;
+    }
+
+    header div.left img.logo{
         display: block;
+    }
+
+    header div.right{
+        display: block;
+        padding-top: 50px;
+    }
+
+    header div.right .text{
+        font-size: 40px;
+    }
+
+    section.diapo{
+        overflow: hidden;
+        height: 300px;
+    }
+
+    section.diapo div.elements div.element{
+        height: 300px;
     }
 
     section.diapo div.elements div#slide01{
