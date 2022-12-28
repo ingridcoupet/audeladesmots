@@ -43,7 +43,6 @@ body{
     align-items: center;
     background-color: var(--light-pink);
     height: 200px;
-    backdrop-filter: blur(2px);
     z-index: 100;
 }
 
@@ -207,6 +206,10 @@ section.diapo div.elements div#slide03{
     header div.left .text{
         font-size: 25px;
     }
+
+    header div.right .text{
+        font-size: 30px;
+    }
 }
 
 @media screen and (max-width: 900px){
@@ -219,8 +222,8 @@ section.diapo div.elements div#slide03{
 
     .navbar{
         padding: 0;
-        background-color: #ffffff00;
-        backdrop-filter: none;
+        background-color: var(--light-pink);
+        height: 150px;
     }
     
     .navbar .menu-hamburger{
@@ -254,7 +257,7 @@ section.diapo div.elements div#slide03{
     }
 
     .navbar img.logo{
-        display: none;
+        margin-left: 30px;
     }
 
     .navbar .nav-links ul li{
@@ -279,6 +282,7 @@ section.diapo div.elements div#slide03{
     header div.right{
         display: block;
         padding-top: 50px;
+        height: fit-content;
     }
 
     header div.right .text{
@@ -287,11 +291,11 @@ section.diapo div.elements div#slide03{
 
     section.diapo{
         overflow: hidden;
-        height: 300px;
+        height: 150px;
     }
 
     section.diapo div.elements div.element{
-        height: 300px;
+        height: 150px;
     }
 
     section.diapo div.elements div#slide01{
