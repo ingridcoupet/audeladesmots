@@ -1,5 +1,11 @@
 @import url(https://fonts.googleapis.com/css?family=Dancing+Script);
 
+:root{
+    --light-green: #c3ffeb;
+    --light-pink: #ffc3eb;
+    --black: #270c25;
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -29,6 +35,7 @@ html {
     background-color: #ffc2d3;
     height: 200px;
     backdrop-filter: blur(2px);
+    z-index: 100;
 }
 
 .navbar img.logo{
@@ -38,7 +45,7 @@ html {
 }
 
 .navbar a{
-    color: black;
+    color: var(--black);
 }
 
 .navbar .nav-links ul{
@@ -66,23 +73,30 @@ html {
 }
 
 header{
-    padding: 250px 200px;
-    background: url("img/accueil.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: top;
-    height: 300px;
+    padding-top: 270px;
+    padding-left: 10%;
+    background-color: var(--light-green);
+    height: 400px;
+}
+
+header img.logo{
+    border-radius: 100%;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    margin-top: -140px;
+    display: none;
 }
 
 header div.title{
     height: fit-content;
     width: fit-content;
+    color: var(--black);
 }
 
 header div.title .head-name{
     font-size: 30px;
     font-weight: 500;
-    color: white;
     width: fit-content;
 }
 
@@ -90,7 +104,6 @@ header div.title .head-name::after{
     font-size: 20px;
     font-weight: 500;
     margin-left: 50px;
-    color: white;
     content: "EI";
 }
 
@@ -98,38 +111,69 @@ header div.title .head-title{
     margin-top: 50px;
     font-size: 45px;
     font-weight: 700;
-    color: white;
 }
 
 header .text{
     margin-top: 70px;
     font-family: Dancing Script;
-    color: white;
     font-size: 35px;
 }
 
-@media screen and (max-width: 1325px){
+section.diapo{
+    overflow: hidden;
+    height: 500px;
+}
 
+section.diapo div.elements{
+    display: flex;
+}
+
+section.diapo div.elements div.element{
+    flex: 1 0 100%;
+    position: relative;
+    height: 500px;
+    width: max-content;
+}
+
+section.diapo div.elements div#slide01{
+    background-image: url("img/slide01.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+section.diapo div.elements div#slide02{
+    background-image: url("img/slide02.png");
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: cover;
+}
+
+section.diapo div.elements div#slide03{
+    background-image: url("img/slide03.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@media screen and (max-width: 450px){
     header div.title .head-name{
-        color: black;
+        font-size: 20px;
     }
-
+    
     header div.title .head-name::after{
-        color: black;
+        font-size: 10px;
     }
     
     header div.title .head-title{
-        color: black;
+        font-size: 35px;
     }
 
     header .text{
-        color: black;
+        font-size: 25px;
     }
-
 }
 
 @media screen and (max-width: 900px){
-
     :target::before {
         content: " ";
         display: block;
@@ -183,47 +227,14 @@ header .text{
     }
 
     header{
-        padding: 100px 50px;
-        height: 150px;
-        background-size: auto;
-    }
-    
-    header div.title .head-name{
-        font-size: 25px;
-        font-weight: 650;
-    }
-    
-    header div.title .head-name::after{
-        font-size: 15px;
-        margin-left: 30px;
-    }
-    
-    header div.title .head-title{
-        margin-top: 30px;
-        font-size: 35px;
-        font-weight: 600;
+        padding-top: 170px;
     }
 
-    header .text{
-        margin-top: 40px;
-    }
-}
-
-@media screen and (max-width: 400px){
-
-    header div.title .head-name{
-        font-weight: 400;
-    }
-    
-    header div.title .head-name::after{
-        margin-left: 20px;
-    }
-    
-    header div.title .head-title{
-        margin-top: 40px;
-        font-size: 30px;
-        font-weight: 550;
-        letter-spacing: -2px;
+    header img.logo{
+        display: block;
     }
 
+    section.diapo div.elements div#slide01{
+        background-position: right;
+    }
 }
