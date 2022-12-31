@@ -182,6 +182,7 @@ section.section-marge{
 
 section h1.section-title{
     position: relative;
+    width: fit-content;
     font-size: 50px;
 }
 
@@ -194,11 +195,15 @@ section h1.section-title::before{
     bottom: 0;
 }
 
-section .section-
-
-section p.section-text{
+section .section-content{
+    width: fit-content;
+    position: relative;
     margin-top: 100px;
     margin-left: 70px;
+}
+
+section p.section-text{
+    width: fit-content;
     font-size: 20px;
 }
 
