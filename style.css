@@ -19,16 +19,11 @@ html {
 	scroll-behavior: smooth;
 }
 
-/* :target::before {
-    content: " ";
-    display: block;
-    height: 90px;
-} */
-
 /* Body */
 
 body{
     background-color: var(--white);
+    height: 2000px;
 }
 
 /* Navbar */
@@ -246,13 +241,9 @@ section.diapo div.elements div#slide03{
 
 /* 2 : Histoire */
 
-section#story{
-}
-
 /* 3 : Tarifs */
 
-section#prices{
-}
+
 
 /* Media Query */
 
@@ -267,18 +258,10 @@ section#prices{
 
 @media screen and (max-width: 900px){
 
-    /* Paramètres... */
-
-    :target::before {
-        content: " ";
-        display: block;
-        height: 150px;
-        visibility: hidden;
-    }
-
     /* Navbar */
 
     .navbar{
+        background-color: transparent;
         position: fixed;
         padding: 0;
         height: 150px;
@@ -316,6 +299,8 @@ section#prices{
 
     .navbar img.logo{
         margin-left: 30px;
+        width: 70px;
+        height: 70px;
     }
 
     .navbar .nav-links ul li{
@@ -328,7 +313,7 @@ section#prices{
     header{
         display: block;
         height: 600px;
-        padding-top: 100px;
+        padding-top: 130px;
     }
 
     header div.left{
