@@ -1,7 +1,7 @@
 /* Option, Parametres et Reset */
 
 :root{
-    --light-green: #c3ffeb;
+    --light-green: #c7fbd4;
     --light-pink: #fdd8f1;
     --black: #270c25;
     --white: #fcf5f5;
@@ -12,18 +12,18 @@
     padding: 0;
     text-decoration: none;
     list-style: none;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 html {
 	scroll-behavior: smooth;
 }
 
-:target::before {
+/* :target::before {
     content: " ";
     display: block;
-    height: 250px;
-    margin-top: -250px;
-}
+    height: 90px;
+} */
 
 /* Body */
 
@@ -34,7 +34,7 @@ body{
 /* Navbar */
 
 .navbar{
-    position: fixed;
+    position: relative;
     padding: 50px;
     display: flex;
     justify-content: space-between;
@@ -85,7 +85,6 @@ body{
 header{
     display: flex;
     justify-content: space-between;
-    padding-top: 200px;
     padding-left: 10%;
     background-color: var(--light-green);
     height: 400px;
@@ -134,11 +133,44 @@ header div.left .text{
     font-size: 35px;
 }
 
+header div.left a.scroll {
+    color: var(--black);
+    margin-top: 30px;
+    line-height: 20px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    width: 70px;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+header div.left a.scroll .scroll-text {
+    position: relative;
+    transition: transform 0.3s;
+}
+
+header div.left a.scroll .scroll-text::before {
+    content: attr(data-text);
+    position: absolute;
+    top: 100%;
+}
+
+header div.left a.scroll .scroll-text:hover {
+    transform: translateY(-100%);
+}
+
+header div.left a.scroll .scroll-icon {
+    font-size: 25px;
+}
+
 header div.right{
     display: flex;
     align-items: center;
     height: 100%;
-    padding-right: 20%;
+    padding-right: 10%;
+    padding-left: 10%;
 }
 
 header div.right .text{
@@ -147,11 +179,37 @@ header div.right .text{
 
 /* Sections */
 
+section.section-marge{
+    padding-top: 0px;
+    padding-left: 200px;
+    padding-right: 100px;
+}
+
+section h1.section-title{
+    position: relative;
+    font-size: 50px;
+}
+
+section h1.section-title::before{
+    content: "";
+    position: absolute;
+    background-color: var(--light-green);
+    width: 50px;
+    height: 7px;
+    bottom: 0;
+}
+
+section p.section-text{
+    margin-top: 100px;
+    margin-left: 70px;
+    font-size: 20px;
+}
+
 /* 1 : Diapo */
 
 section.diapo{
     overflow: hidden;
-    height: 300px;
+    height: 330px;
 }
 
 section.diapo div.elements{
@@ -161,7 +219,7 @@ section.diapo div.elements{
 section.diapo div.elements div.element{
     flex: 1 0 100%;
     position: relative;
-    height: 300px;
+    height: 330px;
     width: max-content;
 }
 
@@ -188,41 +246,41 @@ section.diapo div.elements div#slide03{
 
 /* 2 : Histoire */
 
+section#story{
+}
+
+/* 3 : Tarifs */
+
+section#prices{
+}
+
 /* Media Query */
 
-@media screen and (max-width: 450px){
-    header div.left div.title .head-name{
-        font-size: 20px;
-    }
-    
-    header div.left div.title .head-name::after{
-        font-size: 10px;
-    }
-    
-    header div.left div.title .head-title{
-        font-size: 35px;
-    }
+@media screen and (max-width: 1200px){
 
-    header div.left .text{
-        font-size: 25px;
-    }
+    /* Header */
 
-    header div.right .text{
-        font-size: 30px;
+    header{
+        height: 500px;
     }
 }
 
 @media screen and (max-width: 900px){
+
+    /* Paramètres... */
+
     :target::before {
         content: " ";
         display: block;
-        height: 50px;
-        margin-top: -50px;
+        height: 150px;
+        visibility: hidden;
     }
 
+    /* Navbar */
+
     .navbar{
+        position: fixed;
         padding: 0;
-        background-color: var(--light-pink);
         height: 150px;
     }
     
@@ -265,10 +323,12 @@ section.diapo div.elements div#slide03{
         font-size: 1.2em;
     }
 
+    /* Header */
+
     header{
         display: block;
-        height: 500px;
-        padding-top: 170px;
+        height: 600px;
+        padding-top: 100px;
     }
 
     header div.left{
@@ -282,12 +342,43 @@ section.diapo div.elements div#slide03{
     header div.right{
         display: block;
         padding-top: 50px;
+        padding-left: 0px;
         height: fit-content;
     }
 
     header div.right .text{
         font-size: 40px;
     }
+
+    header div.left a.scroll{
+        display: none;
+    }
+
+    /* Section */
+
+    section.section-marge{
+        padding-top: 100px;
+        padding-left: 100px;
+        padding-right: 50px;
+    }
+
+    section h1.section-title{
+        font-size: 30px;
+    }
+
+    section h1.section-title::before{
+        width: 40px;
+        height: 7px;
+        bottom: -5px;
+    }
+    
+    section p.section-text{
+        margin-top: 70px;
+        margin-left: 50px;
+        font-size: 15px;
+    }
+
+    /* 1 : Diapo */
 
     section.diapo{
         overflow: hidden;
@@ -300,5 +391,66 @@ section.diapo div.elements div#slide03{
 
     section.diapo div.elements div#slide01{
         background-position: right;
+    }
+
+    /* 2 : Histoire */
+
+}
+
+@media screen and (max-width: 450px){
+
+    /* Header */
+
+    header{
+        height: 500px;
+    }
+
+    header div.left div.title .head-name{
+        font-size: 20px;
+    }
+    
+    header div.left div.title .head-name::after{
+        font-size: 10px;
+    }
+    
+    header div.left div.title .head-title{
+        font-size: 35px;
+    }
+
+    header div.left .text{
+        font-size: 25px;
+    }
+
+    header div.right{
+        background-color: red;
+        padding-left: 0;
+    }
+
+    header div.right .text{
+        font-size: 20px;
+    }
+
+    /* Section */
+
+    section.section-marge{
+        padding-top: 70px;
+        padding-left: 30px;
+        padding-right: 50px;
+    }
+
+    section h1.section-title{
+        font-size: 30px;
+    }
+
+    section h1.section-title::before{
+        width: 40px;
+        height: 7px;
+        bottom: -5px;
+    }
+    
+    section p.section-text{
+        margin-top: 50px;
+        margin-left: 20px;
+        font-size: 15px;
     }
 }
