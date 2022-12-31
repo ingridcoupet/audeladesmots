@@ -23,13 +23,13 @@ html {
 
 body{
     background-color: var(--white);
-    height: 3000px;
+    min-height: 3000px;
 }
 
 /* Navbar */
 
 .navbar{
-    position: relative;
+    position: fixed;
     padding: 50px;
     display: flex;
     justify-content: space-between;
@@ -37,14 +37,14 @@ body{
     box-sizing: border-box;
     align-items: center;
     background-color: var(--light-pink);
-    height: 200px;
+    height: 100px;
     z-index: 100;
 }
 
 .navbar img.logo{
     border-radius: 100%;
-    height: 100px;
-    width: 100px;
+    height: 70px;
+    width: 70px;
 }
 
 .navbar a{
@@ -80,6 +80,7 @@ header{
     display: flex;
     justify-content: space-between;
     padding-left: 10%;
+    padding-top: 100px;
     background-color: var(--light-green);
     height: 400px;
     color: var(--black);
@@ -192,6 +193,8 @@ section h1.section-title::before{
     height: 7px;
     bottom: 0;
 }
+
+section .section-
 
 section p.section-text{
     margin-top: 100px;
