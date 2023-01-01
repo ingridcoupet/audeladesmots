@@ -53,6 +53,8 @@ body{
 
 .navbar .nav-links ul{
     display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .navbar .nav-links ul li{
@@ -250,6 +252,7 @@ section.diapo div.elements div#slide03{
 
 /* 3 : Tarifs */
 
+/* 4 : Contact */
 
 
 /* Media Query */
@@ -271,8 +274,6 @@ section.diapo div.elements div#slide03{
         background-color: var(--light-pink);
         position: fixed;
         padding: 0;
-        height: 100px;
-
     }
     
     .navbar .menu-hamburger{
@@ -349,7 +350,7 @@ section.diapo div.elements div#slide03{
     /* Section */
 
     section.section-marge{
-        padding-top: 100px;
+        padding-top: 130px;
         padding-left: 100px;
         padding-right: 50px;
     }
@@ -374,15 +375,11 @@ section.diapo div.elements div#slide03{
 
     section.diapo{
         overflow: hidden;
-        height: 150px;
+        height: 250px;
     }
 
     section.diapo div.elements div.element{
-        height: 150px;
-    }
-
-    section.diapo div.elements div#slide01{
-        background-position: right;
+        height: 250px;
     }
 
     /* 2 : Histoire */
@@ -424,9 +421,7 @@ section.diapo div.elements div#slide03{
     /* Section */
 
     section.section-marge{
-        padding-top: 70px;
         padding-left: 30px;
-        padding-right: 50px;
     }
 
     section h1.section-title{
