@@ -1,7 +1,7 @@
 /* Option, Parametres et Reset */
 
 :root{
-    --light-green: #c7fbd4;
+    --light-green: #2b7971;
     --light-pink: #fdd8f1;
     --black: #270c25;
     --white: #fcf5f5;
@@ -74,6 +74,7 @@ body{
 
 .scroll-block{
     overflow-y: hidden;
+
 }
 
 /* Header */
@@ -85,7 +86,7 @@ header{
     padding-top: 100px;
     background-color: var(--light-green);
     height: 400px;
-    color: var(--black);
+    color: var(--white);
 }
 
 header div.left{
@@ -131,7 +132,7 @@ header div.left .text{
 }
 
 header div.left a.scroll {
-    color: var(--black);
+    color: var(--white);
     margin-top: 30px;
     line-height: 20px;
     text-decoration: none;
@@ -252,10 +253,49 @@ section.diapo div.elements div#slide03{
 
 /* 3 : Tarifs */
 
-/* 4 : Contact */
+/* /* 4 : Contact */
 
+section#contact div.contact-container{
+    display: grid; 
+    grid-template-columns: 1fr 1fr; 
+    grid-template-rows: 1fr 1fr; 
+    gap: 70px 150px; 
+    grid-template-areas: 
+        ". ."
+        ". .";
+}
+
+section#contact div.contact-container div.contact-box{
+    display: flex;
+    align-items: center;
+    background-color: var(--light-pink);
+    height: 70px;
+    width: 500px;
+    border-radius: 20px;
+}
+
+section#contact div.contact-container div.contact-box .logo{
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 50px;
+    height: 50px;
+    margin-right: 50px;
+    margin-left: 10px;
+}
 
 /* Media Query */
+
+@media (max-width: 1430px) {
+    /* Section */
+    
+    /* 4 : Contact */
+
+    section#contact div.contact-container{
+        display: flex;
+        flex-direction: column;
+    }
+}
 
 @media screen and (max-width: 1200px){
 
@@ -364,10 +404,14 @@ section.diapo div.elements div#slide03{
         height: 7px;
         bottom: -5px;
     }
+
+    section .section-content{
+        margin-top: 80px;
+        margin-left: 50px;
+    }
     
     section p.section-text{
         margin-top: 70px;
-        margin-left: 50px;
         font-size: 15px;
     }
 
@@ -382,11 +426,26 @@ section.diapo div.elements div#slide03{
         height: 250px;
     }
 
-    /* 2 : Histoire */
+    /* 4 : Contact */
 
+    section#contact div.contact-container div.contact-box{
+        width: 400px;
+    }
 }
 
-@media screen and (max-width: 450px){
+@media screen and (max-width : 600px) {
+
+    /* Section */
+
+    /* 4 : Contact */
+
+    section#contact div.contact-container div.contact-box{
+        width: 300px;
+        font-size: small;
+    }
+}
+
+@media screen and (max-width: 500px){
 
     /* Header */
 
@@ -433,10 +492,19 @@ section.diapo div.elements div#slide03{
         height: 7px;
         bottom: -5px;
     }
+
+    section .section-content{
+        margin-left: 20px;
+    }
     
     section p.section-text{
-        margin-top: 50px;
-        margin-left: 20px;
         font-size: 15px;
     }
+
+    /* 4 : Contact */
+
+    section#contact div.contact-container div.contact-box .logo{
+        margin-right: 10px;
+    }
+
 }
