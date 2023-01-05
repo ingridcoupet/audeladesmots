@@ -235,7 +235,6 @@ section.diapo div.elements div.element#slide02 {
 section#prices div.prices-container {
   display: flex;
   overflow-x: scroll;
-  overflow-y: hidden;
   width: 100%;
   height: 430px;
 }
