@@ -70,7 +70,7 @@ function startTimer(){
 
 // TARIFS
 
-let requestURL = 'prices.json'
+let requestURL = 'https://ingridcoupet.github.io/audeladesmots/prices.json'
 let request = new XMLHttpRequest();
 request.open('GET', requestURL);
 request.responseType = 'json';
