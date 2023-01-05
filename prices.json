@@ -1,0 +1,58 @@
+[
+    {
+        "id": "1",
+        "title": "Cheval",
+        "img": "img/prices/price01.png",
+        "desc": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ab odit, porro iusto, ullam, quis nobis earum modi adipisci fugit deleniti similique distinctio id!",
+        "cost": "14.99 €"
+    },
+    {
+        "id": "2",
+        "title": "Cheval2",
+        "img": "img/prices/price01.png",
+        "desc": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ab odit, porro iusto, ullam, quis nobis earum modi adipisci fugit deleniti similique distinctio id!",
+        "cost": "14.99 €"
+    },
+    {
+        "id": "3",
+        "title": "Cheval3",
+        "img": "img/prices/price01.png",
+        "desc": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ab odit, porro iusto, ullam, quis nobis earum modi adipisci fugit deleniti similique distinctio id!",
+        "cost": "14.99 €"
+    },
+    {
+        "id": "4",
+        "title": "Cheval4",
+        "img": "img/prices/price01.png",
+        "desc": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ab odit, porro iusto, ullam, quis nobis earum modi adipisci fugit deleniti similique distinctio id!",
+        "cost": "14.99 €"
+    },
+    {
+        "id": "5",
+        "title": "Cheval5",
+        "img": "img/prices/price01.png",
+        "desc": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ab odit, porro iusto, ullam, quis nobis earum modi adipisci fugit deleniti similique distinctio id!",
+        "cost": "14.99 €"
+    },
+    {
+        "id": "6",
+        "title": "Cheval6",
+        "img": "img/prices/price01.png",
+        "desc": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ab odit, porro iusto, ullam, quis nobis earum modi adipisci fugit deleniti similique distinctio id!",
+        "cost": "14.99 €"
+    },
+    {
+        "id": "7",
+        "title": "Cheval7",
+        "img": "img/prices/price01.png",
+        "desc": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ab odit, porro iusto, ullam, quis nobis earum modi adipisci fugit deleniti similique distinctio id!",
+        "cost": "14.99 €"
+    },
+    {
+        "id": "8",
+        "title": "Cheval8",
+        "img": "img/prices/price01.png",
+        "desc": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ab odit, porro iusto, ullam, quis nobis earum modi adipisci fugit deleniti similique distinctio id!",
+        "cost": "14.99 €"
+    }
+]

@@ -1,562 +1,467 @@
-/* Option, Parametres et Reset */
-
-:root{
-    --green: #2b7971;
-    --light-pink: #fdd8f1;
-    --black: #270c25;
-    --white: #fcf5f5;
-
-    --border-radius: 20px;
+html, body, p, ol, ul, li, dl, dt, dd, blockquote, figure, fieldset, legend, textarea, pre, iframe, hr, h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
 }
 
-*{
-    margin: 0;
-    padding: 0;
-    text-decoration: none;
-    list-style: none;
-    font-family: Arial, Helvetica, sans-serif;
+h1, h2, h3, h4, h5, h6 {
+  font-size: 100%;
+  font-weight: bold;
+}
+
+ul {
+  list-style: none;
+}
+
+button, input, select {
+  margin: 0;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+img, video {
+  height: auto;
+  max-width: 100%;
+}
+
+iframe {
+  border: 0;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td, th {
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+* {
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 html {
-	scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
-/* Body */
-
-body{
-    background-color: var(--white);
+body {
+  background-color: #fcf5f5;
 }
 
-/* Navbar */
-
-.navbar{
-    position: fixed;
-    padding: 50px;
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    box-sizing: border-box;
-    align-items: center;
-    background-color: var(--light-pink);
-    height: 100px;
-    z-index: 100;
+.navbar {
+  position: fixed;
+  padding: 50px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  box-sizing: border-box;
+  align-items: center;
+  background-color: #fdd8f1;
+  height: 100px;
+  z-index: 100;
+}
+.navbar img.logo {
+  border-radius: 100%;
+  height: 70px;
+  width: 70px;
+}
+.navbar a {
+  color: #270c25;
+}
+.navbar a:hover {
+  color: #fcf5f5;
+}
+.navbar .nav-links ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.navbar .nav-links ul li {
+  margin: 0 30px;
+}
+.navbar .nav-links ul li a.active {
+  font-weight: 600;
+}
+.navbar .menu-hamburger {
+  display: none;
+  position: fixed;
+  right: 50px;
+  width: 35px;
 }
 
-.navbar img.logo{
-    border-radius: 100%;
-    height: 70px;
-    width: 70px;
+.scroll-block {
+  overflow-y: hidden;
 }
 
-.navbar a{
-    color: var(--black);
+header {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 10%;
+  padding-top: 100px;
+  background-color: #2b7971;
+  height: 450px;
+  color: #fcf5f5;
 }
-
-.navbar a:hover{
-    color: var(--white);
+header div.left {
+  padding-top: 70px;
 }
-
-.navbar .nav-links ul{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+header div.left img.logo {
+  border-radius: 100%;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  margin-top: -140px;
+  display: none;
 }
-
-.navbar .nav-links ul li{
-    margin: 0 30px;
+header div.left div.title {
+  height: fit-content;
+  width: fit-content;
 }
-
-.navbar .nav-links ul li a.active{
-    font-weight: 600;
+header div.left div.title .head-name {
+  font-size: 30px;
+  font-weight: 500;
+  width: fit-content;
 }
-
-.navbar .menu-hamburger{
-    display: none;
-    position: fixed;
-    right: 50px;
-    width: 35px;
+header div.left div.title .head-name::after {
+  font-size: 20px;
+  font-weight: 500;
+  margin-left: 50px;
+  content: "EI";
 }
-
-.scroll-block{
-    overflow-y: hidden;
-
+header div.left div.title .head-title {
+  margin-top: 50px;
+  font-size: 45px;
+  font-weight: 700;
 }
-
-/* Header */
-
-header{
-    display: flex;
-    justify-content: space-between;
-    padding-left: 10%;
-    padding-top: 100px;
-    background-color: var(--green);
-    height: 400px;
-    color: var(--white);
+header div.left .text {
+  margin-top: 70px;
+  font-size: 35px;
 }
-
-header div.left{
-    padding-top: 70px;
-}
-
-header div.left img.logo{
-    border-radius: 100%;
-    width: 100px;
-    height: 100px;
-    position: absolute;
-    margin-top: -140px;
-    display: none;
-}
-
-header div.left div.title{
-    height: fit-content;
-    width: fit-content;
-}
-
-header div.left div.title .head-name{
-    font-size: 30px;
-    font-weight: 500;
-    width: fit-content;
-}
-
-header div.left div.title .head-name::after{
-    font-size: 20px;
-    font-weight: 500;
-    margin-left: 50px;
-    content: "EI";
-}
-
-header div.left div.title .head-title{
-    margin-top: 50px;
-    font-size: 45px;
-    font-weight: 700;
-}
-
-header div.left .text{
-    margin-top: 70px;
-    font-size: 35px;
-}
-
 header div.left a.scroll {
-    color: var(--white);
-    margin-top: 30px;
-    line-height: 20px;
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    position: absolute;
-    width: 70px;
-    justify-content: space-between;
-    overflow: hidden;
+  color: #fcf5f5;
+  margin-top: 30px;
+  line-height: 20px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  width: 70px;
+  justify-content: space-between;
+  overflow: hidden;
 }
-
 header div.left a.scroll .scroll-text {
-    position: relative;
-    transition: transform 0.3s;
+  position: relative;
+  transition: transform 0.3s;
 }
-
 header div.left a.scroll .scroll-text::before {
-    content: attr(data-text);
-    position: absolute;
-    top: 100%;
+  content: attr(data-text);
+  position: absolute;
+  top: 100%;
 }
-
 header div.left a.scroll .scroll-text:hover {
-    transform: translateY(-100%);
+  transform: translateY(-100%);
 }
-
 header div.left a.scroll .scroll-icon {
-    font-size: 25px;
+  font-size: 25px;
+}
+header div.right {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding-right: 10%;
+  padding-left: 10%;
+}
+header div.right .text {
+  font-size: 50px;
 }
 
-header div.right{
+section.section-marge {
+  padding-top: 150px;
+  padding-left: 200px;
+  padding-right: 100px;
+}
+
+section h1.section-title {
+  position: relative;
+  width: fit-content;
+  font-size: 50px;
+}
+section h1.section-title::before {
+  content: "";
+  position: absolute;
+  background-color: #2b7971;
+  width: 50px;
+  height: 7px;
+  bottom: 0;
+}
+section .section-content {
+  overflow: hidden;
+  width: fit-content;
+  position: relative;
+  margin-top: 100px;
+  margin-left: 70px;
+}
+section p.section-text {
+  width: fit-content;
+  font-size: 20px;
+}
+
+section.diapo {
+  overflow: hidden;
+  height: 430px;
+}
+section.diapo div.elements {
+  display: flex;
+}
+section.diapo div.elements div.element {
+  flex: 1 0 100%;
+  position: relative;
+  height: 430px;
+  width: max-content;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+section.diapo div.elements div.element#slide02 {
+  background-position: bottom;
+}
+
+section#prices div.prices-container {
+  display: flex;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  width: 100%;
+  height: 430px;
+}
+section#prices div.prices-container div.price-box {
+  height: 400px;
+  min-width: 250px;
+  margin-right: 100px;
+  border-radius: 20px;
+  background-color: #fdd8f1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+section#prices div.prices-container div.price-box .price-image {
+  width: 80%;
+  border-radius: 20px;
+}
+section#prices div.prices-container div.price-box .price-desc {
+  font-size: 15px;
+  margin-left: 10px;
+  margin-right: 10px;
+  text-align: center;
+}
+section#prices div.prices-container div.price-box .price-cost {
+  font-weight: bold;
+  font-size: 20px;
+  color: #2b7971;
+}
+
+section#contact div.contact-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 70px 150px;
+  grid-template-areas: ". ." ". .";
+}
+section#contact div.contact-container div.contact-box {
+  display: flex;
+  align-items: center;
+  background-color: #fdd8f1;
+  height: 70px;
+  width: 500px;
+  border-radius: 20px;
+}
+section#contact div.contact-container div.contact-box .logo {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 50px;
+  height: 50px;
+  margin-right: 50px;
+  margin-left: 10px;
+}
+
+@media (max-width: 1430px) {
+  section#contact div.contact-container {
     display: flex;
-    align-items: center;
-    height: 100%;
-    padding-right: 10%;
-    padding-left: 10%;
+    flex-direction: column;
+  }
 }
-
-header div.right .text{
-    font-size: 50px;
+@media screen and (max-width: 1200px) {
+  header {
+    height: 500px;
+  }
 }
-
-/* Sections */
-
-section.section-marge{
-    padding-top: 150px;
-    padding-left: 200px;
-    padding-right: 100px;
-}
-
-section h1.section-title{
-    position: relative;
-    width: fit-content;
-    font-size: 50px;
-}
-
-section h1.section-title::before{
-    content: "";
+@media screen and (max-width: 900px) {
+  .navbar {
+    background-color: #fdd8f1;
+    position: fixed;
+    padding: 0;
+  }
+  .navbar .menu-hamburger {
+    display: block;
+  }
+  .navbar img.logo {
+    margin-left: 30px;
+    width: 70px;
+    height: 70px;
+  }
+  .navbar .nav-links {
+    backdrop-filter: blur(7px);
+    top: 0;
+    left: 0;
     position: absolute;
-    background-color: var(--green);
-    width: 50px;
-    height: 7px;
-    bottom: 0;
-}
-
-section .section-content{
-    overflow: hidden;
-    width: fit-content;
-    position: relative;
-    margin-top: 100px;
-    margin-left: 70px;
-}
-
-section p.section-text{
-    width: fit-content;
-    font-size: 20px;
-}
-
-/* 1 : Diapo */
-
-section.diapo{
-    overflow: hidden;
-    height: 430px;
-}
-
-section.diapo div.elements{
-    display: flex;
-}
-
-section.diapo div.elements div.element{
-    flex: 1 0 100%;
-    position: relative;
-    height: 430px;
-    width: max-content;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-}
-
-section.diapo div.elements div.element#slide02{
-    background-position: bottom;
-}
-
-/* 2 : Histoire */
-
-/* 3 : Tarifs */
-
-section#prices div.prices-container{
-    display: flex;
-    overflow-x: scroll;
-    overflow-y: hidden;
+    background-color: rgba(255, 255, 255, 0.2117647059);
     width: 100%;
-    height: 430px;
-}
-
-section#prices div.prices-container div.price-box{
-    height: 400px;
-    min-width: 250px;
-    margin-right: 100px;
-    border-radius: var(--border-radius);
-    background-color: var(--light-pink);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: -100%;
+    transition: all 0.5s ease;
+  }
+  .navbar .nav-links ul {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-around;
-    background-color: var(--light-pink);
-
-}
-
-section#prices div.prices-container div.price-box .price-title{
-
-}
-
-section#prices div.prices-container div.price-box .price-image{
-    width: 80%;
-    border-radius: var(--border-radius);
-}
-
-section#prices div.prices-container div.price-box .price-desc{
+  }
+  .navbar .nav-links ul li {
+    margin: 20% 0;
+    font-size: 1.2em;
+  }
+  .navbar .nav-links .mobile-menu {
+    margin-left: 0;
+  }
+  header {
+    display: block;
+    height: 600px;
+    padding-top: 130px;
+  }
+  header div.left {
+    padding-top: 0;
+  }
+  header div.left img.logo {
+    display: block;
+  }
+  header div.left a.scroll {
+    display: none;
+  }
+  header div.right {
+    display: block;
+    padding-top: 50px;
+    padding-left: 0px;
+    height: fit-content;
+  }
+  header div.right .text {
+    font-size: 40px;
+  }
+  section.section-marge {
+    padding-top: 130px;
+    padding-left: 100px;
+    padding-right: 90px;
+  }
+  section h1.section-title {
+    font-size: 30px;
+  }
+  section h1.section-title::before {
+    width: 40px;
+    height: 7px;
+    bottom: -5px;
+  }
+  section .section-content {
+    margin-top: 80px;
+    margin-left: 50px;
+  }
+  section p.section-text {
+    margin-top: 70px;
     font-size: 15px;
-    margin-left: 10px;
-    margin-right: 10px;
-    text-align: center;
-}
-
-section#prices div.prices-container div.price-box .price-cost{
-    font-weight: bold;
-    font-size: 20px;
-    color: var(--green);
-}
-
-/* 4 : Contact */
-
-section#contact div.contact-container{
-    display: grid; 
-    grid-template-columns: 1fr 1fr; 
-    grid-template-rows: 1fr 1fr; 
-    gap: 70px 150px; 
-    grid-template-areas: 
-        ". ."
-        ". .";
-}
-
-section#contact div.contact-container div.contact-box{
-    display: flex;
-    align-items: center;
-    background-color: var(--light-pink);
-    height: 70px;
-    width: 500px;
-    border-radius: var(--border-radius);
-}
-
-section#contact div.contact-container div.contact-box .logo{
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    width: 50px;
-    height: 50px;
+  }
+  section.diapo {
+    overflow: hidden;
+    height: 250px;
+  }
+  section.diapo div.elements div.element {
+    height: 250px;
+  }
+  section#prices div.prices-container {
+    height: 330px;
+  }
+  section#prices div.prices-container div.price-box {
+    height: 300px;
+    min-width: 170px;
     margin-right: 50px;
-    margin-left: 10px;
+  }
+  section#prices div.prices-container div.price-box .price-image {
+    width: 80%;
+  }
+  section#prices div.prices-container div.price-box .price-desc {
+    font-size: 12px;
+  }
+  section#contact div.contact-container div.contact-box {
+    width: 400px;
+  }
+}
+@media screen and (max-width: 600px) {
+  section#contact div.contact-container div.contact-box {
+    width: 300px;
+    font-size: small;
+  }
+}
+@media screen and (max-width: 500px) {
+  header {
+    height: 500px;
+  }
+  header div.left div.title .head-name {
+    font-size: 20px;
+  }
+  header div.left div.title .head-name::after {
+    font-size: 10px;
+  }
+  header div.left div.title .head-title {
+    font-size: 35px;
+  }
+  header div.left .text {
+    font-size: 25px;
+  }
+  header div.right {
+    padding-left: 0;
+  }
+  header div.right .text {
+    font-size: 20px;
+  }
+  section.section-marge {
+    padding-left: 30px;
+  }
+  section .section-marge {
+    padding-left: 30px;
+  }
+  section h1.section-title {
+    font-size: 30px;
+  }
+  section h1.section-title::before {
+    width: 40px;
+    height: 7px;
+    bottom: -5px;
+  }
+  section .section-content {
+    margin-left: 20px;
+  }
+  section p.section-text {
+    font-size: 15px;
+  }
+  section#contact div.contact-container div.contact-box .logo {
+    margin-right: 10px;
+  }
 }
 
-/* Media Query */
-
-@media (max-width: 1430px) {
-    /* Section */
-
-    /* 4 : Contact */
-
-    section#contact div.contact-container{
-        display: flex;
-        flex-direction: column;
-    }
-}
-
-@media screen and (max-width: 1200px){
-
-    /* Header */
-
-    header{
-        height: 500px;
-    }
-}
-
-@media screen and (max-width: 900px){
-
-    /* Navbar */
-
-    .navbar{
-        background-color: var(--light-pink);
-        position: fixed;
-        padding: 0;
-    }
-    
-    .navbar .menu-hamburger{
-        display: block;
-    }
-
-    .nav-links{
-        backdrop-filter: blur(7px);
-        top: 0;
-        left: 0;
-        position: absolute;
-        background-color: #ffffff36;
-        width: 100%;
-        height: 100vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-left: -100%;
-        transition: all 0.5s ease;
-    }
-
-    .nav-links.mobile-menu{
-        margin-left: 0;
-    }
-
-    .nav-links ul{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .navbar img.logo{
-        margin-left: 30px;
-        width: 70px;
-        height: 70px;
-    }
-
-    .navbar .nav-links ul li{
-        margin: 20% 0;
-        font-size: 1.2em;
-    }
-
-    /* Header */
-
-    header{
-        display: block;
-        height: 600px;
-        padding-top: 130px;
-    }
-
-    header div.left{
-        padding-top: 0;
-    }
-
-    header div.left img.logo{
-        display: block;
-    }
-
-    header div.right{
-        display: block;
-        padding-top: 50px;
-        padding-left: 0px;
-        height: fit-content;
-    }
-
-    header div.right .text{
-        font-size: 40px;
-    }
-
-    header div.left a.scroll{
-        display: none;
-    }
-
-    /* Section */
-
-    section.section-marge{
-        padding-top: 130px;
-        padding-left: 100px;
-        padding-right: 90px;
-    }
-
-    section h1.section-title{
-        font-size: 30px;
-    }
-
-    section h1.section-title::before{
-        width: 40px;
-        height: 7px;
-        bottom: -5px;
-    }
-
-    section .section-content{
-        margin-top: 80px;
-        margin-left: 50px;
-    }
-    
-    section p.section-text{
-        margin-top: 70px;
-        font-size: 15px;
-    }
-
-    /* 1 : Diapo */
-
-    section.diapo{
-        overflow: hidden;
-        height: 250px;
-    }
-
-    section.diapo div.elements div.element{
-        height: 250px;
-    }
-
-    /* 3 : Tarifs */
-
-    section#prices div.prices-container div.price-box{
-        height: 400px;
-        min-width: 250px;
-        margin-right: 100px;
-        border-radius: var(--border-radius);
-        background-color: var(--light-pink);
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-around;
-        background-color: var(--light-pink);
-
-    }
-
-    /* 4 : Contact */
-
-    section#contact div.contact-container div.contact-box{
-        width: 400px;
-    }
-}
-
-@media screen and (max-width : 600px) {
-
-    /* Section */
-
-    /* 4 : Contact */
-
-    section#contact div.contact-container div.contact-box{
-        width: 300px;
-        font-size: small;
-    }
-}
-
-@media screen and (max-width: 500px){
-
-    /* Header */
-
-    header{
-        height: 500px;
-    }
-
-    header div.left div.title .head-name{
-        font-size: 20px;
-    }
-    
-    header div.left div.title .head-name::after{
-        font-size: 10px;
-    }
-    
-    header div.left div.title .head-title{
-        font-size: 35px;
-    }
-
-    header div.left .text{
-        font-size: 25px;
-    }
-
-    header div.right{
-        padding-left: 0;
-    }
-
-    header div.right .text{
-        font-size: 20px;
-    }
-
-    /* Section */
-
-    section.section-marge{
-        padding-left: 30px;
-    }
-
-    section h1.section-title{
-        font-size: 30px;
-    }
-
-    section h1.section-title::before{
-        width: 40px;
-        height: 7px;
-        bottom: -5px;
-    }
-
-    section .section-content{
-        margin-left: 20px;
-    }
-    
-    section p.section-text{
-        font-size: 15px;
-    }
-
-    /* 4 : Contact */
-
-    section#contact div.contact-container div.contact-box .logo{
-        margin-right: 10px;
-    }
-
-}
+/*# sourceMappingURL=style.css.map */
