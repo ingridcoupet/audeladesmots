@@ -1,4 +1,4 @@
-let requestURL = document.location.href + '/prices/prices.json'
+let requestURL = document.location.href + '/prices/prices.json';
 alert(requestURL);
 let request = new XMLHttpRequest();
 request.open('GET', requestURL);
