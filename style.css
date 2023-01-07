@@ -238,6 +238,7 @@ section#prices div.prices-container {
 section#prices div.prices-container div.price-box {
   height: 400px;
   min-width: 250px;
+  max-width: 2500px;
   margin-right: 100px;
   border-radius: 20px;
   background-color: #fdd8f1;
@@ -335,7 +336,7 @@ section#contact div.contact-container div.contact-box .logo {
     margin: 20% 0;
     font-size: 1.2em;
   }
-  .navbar .nav-links .mobile-menu {
+  .navbar .nav-links.mobile-menu {
     margin-left: 0;
   }
   header {
@@ -395,6 +396,7 @@ section#contact div.contact-container div.contact-box .logo {
   section#prices div.prices-container div.price-box {
     height: 300px;
     min-width: 170px;
+    max-width: 170px;
     margin-right: 50px;
   }
   section#prices div.prices-container div.price-box .price-image {
@@ -408,6 +410,11 @@ section#contact div.contact-container div.contact-box .logo {
   }
 }
 @media screen and (max-width: 600px) {
+  section.section-marge {
+    padding-top: 130px;
+    padding-left: 100px;
+    padding-right: 80px;
+  }
   section#contact div.contact-container div.contact-box {
     width: 300px;
     font-size: small;
@@ -437,6 +444,7 @@ section#contact div.contact-container div.contact-box .logo {
   }
   section.section-marge {
     padding-left: 30px;
+    padding-right: 30px;
   }
   section .section-marge {
     padding-left: 30px;
@@ -454,6 +462,12 @@ section#contact div.contact-container div.contact-box .logo {
   }
   section p.section-text {
     font-size: 15px;
+  }
+  section#contact div.contact-container div.contact-box {
+    width: 250px;
+  }
+  section#contact div.contact-container div.contact-box p.name {
+    font-size: 13px;
   }
   section#contact div.contact-container div.contact-box .logo {
     margin-right: 10px;
