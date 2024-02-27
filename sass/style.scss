@@ -1,0 +1,428 @@
+@import url('https://fonts.googleapis.com/css2?family=Contrail+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Allura&display=swap');
+
+$light-pink: #FFBBB7;
+$green: #2C7873;
+$white: #faf1f0;
+
+$navbar-height: 75px;
+
+body{
+    color: $green;
+    font-family: "Contrail One", cursive;
+    z-index: 1;
+    overflow-x: hidden;
+    background-color: $white;
+}
+
+// HEADER
+
+// -Logo
+
+header section#logo{
+    background-color: $light-pink;
+    //! Attention si la HEIGHT est modifier il faut la modifier aussi deans la variable 'STIKY' du fichier app.js a la racine du projet
+    height: 150px;
+    //! ----------
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img{
+        height: 100%;
+    }
+}
+
+// -Navbar
+
+header nav {
+    position: relative;
+    z-index: 100;
+    top: 0;
+    width: 100%;
+    box-sizing: border-box;
+    height: $navbar-height;
+    background-color: $light-pink;
+
+    &.sticky{
+        position: fixed;
+        top: 0;
+        width: 100%;
+    }
+
+    img.logo {
+        border-radius: 100%;
+        height: 70px;
+        width: 70px;
+    }
+
+    .nav-links ul{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        position: absolute;
+        
+        li a{
+            text-decoration: none;
+            font-family: 'Contrail One', sans-serif;
+            cursor: pointer;
+            color: $green;
+    
+            &:hover{
+                text-decoration: underline;
+            }
+
+            &.active{
+                font-weight: bold;
+                text-decoration: underline;
+            }    
+        }
+    }
+
+    .menu-hamburger {
+        display: none;
+        position: fixed;
+        left: $navbar-height / 3;
+        width: 35px;
+    }
+}
+
+// -Margin Div
+
+header div#margin.active{
+    height: $navbar-height;
+}
+
+// -Slider
+
+header img#slider{
+    width: 100vw;
+    height: 10vw;
+    overflow: hidden;
+    object-fit: cover;
+}
+
+// MAIN
+
+// -Section
+
+main section{
+    padding-left: 70px;
+    padding-right: 20px;
+    padding-top: 10vw;
+
+    h2{
+        font-size: 3vw;
+        text-decoration: underline;
+        font-family: "Allura", cursive;
+    }
+
+    h3{
+        font-size: 1vw;
+        text-decoration: underline;
+    }
+
+    p{
+        padding: 20px;
+        font-size: 1vw;
+        text-align: justify;
+    }
+
+    div.text-img{
+        padding: 20px 0px;
+        display: flex;
+        justify-content: space-between;
+
+        &.center{
+            align-items: center;
+        }
+
+        img{
+            width: 24%;
+            height: 100%;
+            padding-top: 20px;
+        }
+        
+        p{
+            width: 74%;
+        }
+    }
+
+    div.sub-text{
+        padding: 20px;
+    }
+
+    ul{
+        margin-left: 40px;
+        font-size: 1vw;
+        text-align: justify;
+        list-style: disc;
+    }
+
+    a{
+        color: $green;
+    }
+}
+
+//* -------- CARTES --------
+
+main section div.card-container{
+    display: flex;
+    padding: 20px;
+    justify-content: space-between;
+
+    div.card{
+        background-color: transparent;
+        width: 16vw;
+        height: 16vw;
+        perspective: 1000px;
+        cursor: pointer;
+
+        &.active .card-inner{
+            transform: rotateX(180deg);
+        }
+
+        div.card-inner{
+            position: relative;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
+
+            .card-front, .card-back {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                -webkit-backface-visibility: hidden;
+                backface-visibility: hidden;
+
+                p{
+                    text-align: left;
+                }
+            }
+
+            .card-front {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-position: center;
+                background-size: cover;
+                color: $white;
+            }
+              
+            .card-back {
+                background-color: $light-pink;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                transform: rotateX(180deg);
+            }
+        }
+    }
+}
+
+// FOOTER
+
+footer{
+	border-top: solid 3px $green;
+	display: flex;
+    justify-content: space-around;
+
+	a{
+		font-size: 12px;
+        color: $green;
+	}
+}
+
+// MEDIA QUERIES
+
+@media screen and (max-width: 1024px) {
+
+    // Section
+
+    main section{
+
+        h2{
+            font-size: 4vw;
+        }
+
+        p{
+            font-size: 1.5vw;
+        }
+
+        div.text-img{
+    
+            img{
+                width: 34%;
+            }
+            
+            p{
+                padding: 74;
+            }
+        }
+    }
+
+    //* CARTES
+
+    //* -------- CARTES --------
+
+    main section div.card-container{
+        display: block;
+
+        div.card{
+            background-color: transparent;
+            width: 25vw;
+            height: 25vw;
+            margin-top: 20px;
+        }
+    }
+}
+
+@media screen and (max-width: 800px) {
+
+    // Logo
+
+    header section#logo{
+        display: none;
+    }
+
+    // Navbar
+
+	header nav {
+        position: fixed;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .menu-hamburger {
+            display: block;
+        }
+
+        img.logo {
+            margin-left: 30px;
+            width: 70px;
+            height: 70px;
+        }
+
+        .nav-links {
+            background-color: rgba($light-pink, 0.75);
+            top: 0;
+            left: 0;
+            position: absolute;
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-left: -100%;
+            transition: all 0.5s ease;
+
+            ul {
+                height: 75%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                li {
+                    height: fit-content;
+                    font-size: 1.2em;
+                }
+            }
+        }
+
+        .nav-links.mobile-menu {
+            margin-left: 0;
+        }
+    }
+
+    // Margin Div
+
+    header div#margin{
+        height: $navbar-height;
+    }
+
+    // Section
+
+    main section{
+
+        h2{
+            font-size: 4vw;
+        }
+
+        p{
+            font-size: 1.5vw;
+        }
+
+        div.text-img{
+
+            display: block;
+    
+            img{
+                padding-left: 20px;
+                padding-right: 20px;
+                right: 0;
+                width: 100%;
+            }
+            
+            p{
+                width: 100%;
+            }
+        }
+
+        ul{
+            font-size: 1.5vw;
+        }
+    }
+}
+
+@media screen and (max-width: 630px) {
+
+    // Slider
+
+    header img#slider{
+        height: 100px;
+    }
+
+    // Section
+
+    main section{
+        padding-top: 10px;
+        padding-left: 10px;
+
+        h2{
+            font-size: 7vw;
+
+        }
+
+        p{
+            font-size: 3vw;
+            padding-top: 5px;
+            padding-left: 5px;
+        }
+
+        div.text-img{
+
+            display: block;
+    
+            img{
+                padding-left: 5px;
+                width: 100%;
+            }
+            
+            p{
+                width: 100%;
+            }
+        }
+
+        ul{
+            font-size: 3vw;
+            padding-top: 5px;
+            padding-left: 5px;
+        }
+    }
+}
+

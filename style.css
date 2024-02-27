@@ -1,0 +1,313 @@
+@import url("https://fonts.googleapis.com/css2?family=Contrail+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Allura&display=swap");
+body {
+  color: #2C7873;
+  font-family: "Contrail One", cursive;
+  z-index: 1;
+  overflow-x: hidden;
+  background-color: #faf1f0;
+}
+
+header section#logo {
+  background-color: #FFBBB7;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+header section#logo img {
+  height: 100%;
+}
+
+header nav {
+  position: relative;
+  z-index: 100;
+  top: 0;
+  width: 100%;
+  box-sizing: border-box;
+  height: 75px;
+  background-color: #FFBBB7;
+}
+header nav.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+header nav img.logo {
+  border-radius: 100%;
+  height: 70px;
+  width: 70px;
+}
+header nav .nav-links ul {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  position: absolute;
+}
+header nav .nav-links ul li a {
+  text-decoration: none;
+  font-family: "Contrail One", sans-serif;
+  cursor: pointer;
+  color: #2C7873;
+}
+header nav .nav-links ul li a:hover {
+  text-decoration: underline;
+}
+header nav .nav-links ul li a.active {
+  font-weight: bold;
+  text-decoration: underline;
+}
+header nav .menu-hamburger {
+  display: none;
+  position: fixed;
+  left: 25px;
+  width: 35px;
+}
+
+header div#margin.active {
+  height: 75px;
+}
+
+header img#slider {
+  width: 100vw;
+  height: 10vw;
+  overflow: hidden;
+  object-fit: cover;
+}
+
+main section {
+  padding-left: 70px;
+  padding-right: 20px;
+  padding-top: 10vw;
+}
+main section h2 {
+  font-size: 3vw;
+  text-decoration: underline;
+  font-family: "Allura", cursive;
+}
+main section h3 {
+  font-size: 1vw;
+  text-decoration: underline;
+}
+main section p {
+  padding: 20px;
+  font-size: 1vw;
+  text-align: justify;
+}
+main section div.text-img {
+  padding: 20px 0px;
+  display: flex;
+  justify-content: space-between;
+}
+main section div.text-img.center {
+  align-items: center;
+}
+main section div.text-img img {
+  width: 24%;
+  height: 100%;
+  padding-top: 20px;
+}
+main section div.text-img p {
+  width: 74%;
+}
+main section div.sub-text {
+  padding: 20px;
+}
+main section ul {
+  margin-left: 40px;
+  font-size: 1vw;
+  text-align: justify;
+  list-style: disc;
+}
+main section a {
+  color: #2C7873;
+}
+
+main section div.card-container {
+  display: flex;
+  padding: 20px;
+  justify-content: space-between;
+}
+main section div.card-container div.card {
+  background-color: transparent;
+  width: 16vw;
+  height: 16vw;
+  perspective: 1000px;
+  cursor: pointer;
+}
+main section div.card-container div.card.active .card-inner {
+  transform: rotateX(180deg);
+}
+main section div.card-container div.card div.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+main section div.card-container div.card div.card-inner .card-front, main section div.card-container div.card div.card-inner .card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+main section div.card-container div.card div.card-inner .card-front p, main section div.card-container div.card div.card-inner .card-back p {
+  text-align: left;
+}
+main section div.card-container div.card div.card-inner .card-front {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-position: center;
+  background-size: cover;
+  color: #faf1f0;
+}
+main section div.card-container div.card div.card-inner .card-back {
+  background-color: #FFBBB7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: rotateX(180deg);
+}
+
+footer {
+  border-top: solid 3px #2C7873;
+  display: flex;
+  justify-content: space-around;
+}
+footer a {
+  font-size: 12px;
+  color: #2C7873;
+}
+
+@media screen and (max-width: 1024px) {
+  main section h2 {
+    font-size: 4vw;
+  }
+  main section p {
+    font-size: 1.5vw;
+  }
+  main section div.text-img img {
+    width: 34%;
+  }
+  main section div.text-img p {
+    padding: 74;
+  }
+  main section div.card-container {
+    display: block;
+  }
+  main section div.card-container div.card {
+    background-color: transparent;
+    width: 25vw;
+    height: 25vw;
+    margin-top: 20px;
+  }
+}
+@media screen and (max-width: 800px) {
+  header section#logo {
+    display: none;
+  }
+  header nav {
+    position: fixed;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  header nav .menu-hamburger {
+    display: block;
+  }
+  header nav img.logo {
+    margin-left: 30px;
+    width: 70px;
+    height: 70px;
+  }
+  header nav .nav-links {
+    background-color: rgba(255, 187, 183, 0.75);
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: -100%;
+    transition: all 0.5s ease;
+  }
+  header nav .nav-links ul {
+    height: 75%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  header nav .nav-links ul li {
+    height: fit-content;
+    font-size: 1.2em;
+  }
+  header nav .nav-links.mobile-menu {
+    margin-left: 0;
+  }
+  header div#margin {
+    height: 75px;
+  }
+  main section h2 {
+    font-size: 4vw;
+  }
+  main section p {
+    font-size: 1.5vw;
+  }
+  main section div.text-img {
+    display: block;
+  }
+  main section div.text-img img {
+    padding-left: 20px;
+    padding-right: 20px;
+    right: 0;
+    width: 100%;
+  }
+  main section div.text-img p {
+    width: 100%;
+  }
+  main section ul {
+    font-size: 1.5vw;
+  }
+}
+@media screen and (max-width: 630px) {
+  header img#slider {
+    height: 100px;
+  }
+  main section {
+    padding-top: 10px;
+    padding-left: 10px;
+  }
+  main section h2 {
+    font-size: 7vw;
+  }
+  main section p {
+    font-size: 3vw;
+    padding-top: 5px;
+    padding-left: 5px;
+  }
+  main section div.text-img {
+    display: block;
+  }
+  main section div.text-img img {
+    padding-left: 5px;
+    width: 100%;
+  }
+  main section div.text-img p {
+    width: 100%;
+  }
+  main section ul {
+    font-size: 3vw;
+    padding-top: 5px;
+    padding-left: 5px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
