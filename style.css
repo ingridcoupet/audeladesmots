@@ -63,7 +63,15 @@ header nav .menu-hamburger {
   display: none;
   position: fixed;
   left: 25px;
+  cursor: pointer;
   width: 35px;
+}
+header nav .logo-mobile {
+  display: none;
+  position: fixed;
+  cursor: pointer;
+  right: 25px;
+  height: 75px;
 }
 
 header div#margin.active {
@@ -178,6 +186,8 @@ footer {
   border-top: solid 3px #2C7873;
   display: flex;
   justify-content: space-around;
+  width: 100%;
+  bottom: 0;
 }
 footer a {
   font-size: 12px;
@@ -202,8 +212,8 @@ footer a {
   }
   main section div.card-container div.card {
     background-color: transparent;
-    width: 25vw;
-    height: 25vw;
+    width: 50vw;
+    height: 50vw;
     margin-top: 20px;
   }
 }
@@ -219,6 +229,9 @@ footer a {
     justify-content: center;
   }
   header nav .menu-hamburger {
+    display: block;
+  }
+  header nav .logo-mobile {
     display: block;
   }
   header nav img.logo {

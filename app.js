@@ -37,3 +37,19 @@ function disableBurger(){
 navLinks.addEventListener('click',()=>{
     disableBurger();
 })
+
+window.onresize = function (){
+    if(document.body.offsetHeight < window.innerHeight){
+        document.querySelector('footer').style.position = 'fixed';
+    }else{
+        document.querySelector('footer').style.position = 'relative';
+    }
+}
+
+window.onload = function (){
+    if(document.body.offsetHeight < window.innerHeight){
+        document.querySelector('footer').style.position = 'fixed';
+    }else{
+        document.querySelector('footer').style.position = 'relative';
+    }
+}
