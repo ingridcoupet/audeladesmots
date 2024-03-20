@@ -198,6 +198,9 @@ footer a {
   main section h2 {
     font-size: 4vw;
   }
+  main section h3 {
+    font-size: 2vw;
+  }
   main section p {
     font-size: 1.5vw;
   }
@@ -300,6 +303,10 @@ footer a {
   }
   main section h2 {
     font-size: 7vw;
+  }
+  main section h3 {
+    font-size: 3vw;
+    padding-bottom: 10px;
   }
   main section p {
     font-size: 3vw;
